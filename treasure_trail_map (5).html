@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f85a40a60cd34789af56f6bb29b143a4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; 
+            bottom: 50px; left: 50px; width: 300px; height: auto; 
+            z-index:9999; font-size:14px;
+            background-color:white; padding:10px; border:2px solid grey;">
+<b>Instructions for Groups:</b><br>
+- Split into teams and follow the numbered stops.<br>
+- At each stop, read the clue and record your answer.<br>
+- Take a photo at each location as proof.<br>
+- Bonus points for the most creative photo (not required at every stop).<br>
+- First team to finish with all correct answers wins!
+</div>
+    
+            <div class="folium-map" id="map_f85a40a60cd34789af56f6bb29b143a4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_f85a40a60cd34789af56f6bb29b143a4 = L.map(
+                "map_f85a40a60cd34789af56f6bb29b143a4",
+                {
+                    center: [51.4983, -0.1375],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_8f274424b99ab450adf1558a475af07b = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_8f274424b99ab450adf1558a475af07b.addTo(map_f85a40a60cd34789af56f6bb29b143a4);
+        
+    
+            var marker_c469987fdf9cb307c2ba41a8c8aa5181 = L.marker(
+                [51.4983, -0.1375],
+                {
+}
+            ).addTo(map_f85a40a60cd34789af56f6bb29b143a4);
+        
+    
+            var icon_e69c5ef59829a149e15f18092cc38c20 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_633b36bc4b5e31aa74e8fe729342f44a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f3fce931360a318998a171a1da521593 = $(`<div id="html_f3fce931360a318998a171a1da521593" style="width: 100.0%; height: 100.0%;"><b>Stop 1: 62 Buckingham Gate</b><br><i>Clue:</i> Outside this modern address, you’ll find a sculpture by a renowned British artist. The subject is not native to London, but its name is a homophone for a famous London river. What is it, and who is the artist?<br><b>what3words:</b> rider.solar.palace</div>`)[0];
+                popup_633b36bc4b5e31aa74e8fe729342f44a.setContent(html_f3fce931360a318998a171a1da521593);
+            
+        
+
+        marker_c469987fdf9cb307c2ba41a8c8aa5181.bindPopup(popup_633b36bc4b5e31aa74e8fe729342f44a)
+        ;
+
+        
+    
+    
+                marker_c469987fdf9cb307c2ba41a8c8aa5181.setIcon(icon_e69c5ef59829a149e15f18092cc38c20);
+            
+    
+            var marker_bd1a95dd846eae3c6f5f97a10aef6105 = L.marker(
+                [51.4983, -0.1375],
+                {
+}
+            ).addTo(map_f85a40a60cd34789af56f6bb29b143a4);
+        
+    
+            var div_icon_aebc236355bd536883f5133c9298222f = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 12pt; color: black;\"\u003e\u003cb\u003e1\u003c/b\u003e\u003c/div\u003e",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+                marker_bd1a95dd846eae3c6f5f97a10aef6105.setIcon(div_icon_aebc236355bd536883f5133c9298222f);
+            
+    
+            var marker_87229ce91f0162bc8b06149e9136cbc1 = L.marker(
+                [51.4964, -0.1395],
+                {
+}
+            ).addTo(map_f85a40a60cd34789af56f6bb29b143a4);
+        
+    
+            var icon_e7bb0f1c5a43e9dc757dfaf8baf203b4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_62b28ec978c25dd8642ed76d6acd4b22 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0b5a1afb554a8d5fee163099f046bdd4 = $(`<div id="html_0b5a1afb554a8d5fee163099f046bdd4" style="width: 100.0%; height: 100.0%;"><b>Stop 2: Westminster Cathedral</b><br><i>Clue:</i> This cathedral’s campanile is the tallest in London. What is its height, and which Italian city inspired the mosaics?<br><b>what3words:</b> spice.frosted.palace</div>`)[0];
+                popup_62b28ec978c25dd8642ed76d6acd4b22.setContent(html_0b5a1afb554a8d5fee163099f046bdd4);
+            
+        
+
+        marker_87229ce91f0162bc8b06149e9136cbc1.bindPopup(popup_62b28ec978c25dd8642ed76d6acd4b22)
+        ;
+
+        
+    
+    
+                marker_87229ce91f0162bc8b06149e9136cbc1.setIcon(icon_e7bb0f1c5a43e9dc757dfaf8baf203b4);
+            
+    
+            var marker_d730e2130f8c5989afbb38f326ba516c = L.marker(
+                [51.4964, -0.1395],
+                {
+}
+            ).addTo(map_f85a40a60cd34789af56f6bb29b143a4);
+        
+    
+            var div_icon_1ed1ba2715a6b8a9a02d6d70d5a52c2a = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 12pt; color: black;\"\u003e\u003cb\u003e2\u003c/b\u003e\u003c/div\u003e",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+                marker_d730e2130f8c5989afbb38f326ba516c.setIcon(div_icon_1ed1ba2715a6b8a9a02d6d70d5a52c2a);
+            
+    
+            var marker_3fc74ec2c3cd2f89bf23addafceb2ff4 = L.marker(
+                [51.4972, -0.1407],
+                {
+}
+            ).addTo(map_f85a40a60cd34789af56f6bb29b143a4);
+        
+    
+            var icon_52c8899c152a99d464fa97ed05735cbe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_94355e0b30f7c69f5f5d83d3d70f53ac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8778079f32f97229c5e71fa0abd715d4 = $(`<div id="html_8778079f32f97229c5e71fa0abd715d4" style="width: 100.0%; height: 100.0%;"><b>Stop 3: Cardinal Place</b><br><i>Clue:</i> Find the rooftop garden. What are the two types of trees planted there? Bonus: What Latin motto is inscribed on the sundial?<br><b>what3words:</b> cabin.tiger.palace</div>`)[0];
+                popup_94355e0b30f7c69f5f5d83d3d70f53ac.setContent(html_8778079f32f97229c5e71fa0abd715d4);
+            
+        
+
+        marker_3fc74ec2c3cd2f89bf23addafceb2ff4.bindPopup(popup_94355e0b30f7c69f5f5d83d3d70f53ac)
+        ;
+
+        
+    
+    
+                marker_3fc74ec2c3cd2f89bf23addafceb2ff4.setIcon(icon_52c8899c152a99d464fa97ed05735cbe);
+            
+    
+            var marker_74ba2fb4799879e68dd01ef09ee206cb = L.marker(
+                [51.4972, -0.1407],
+                {
+}
+            ).addTo(map_f85a40a60cd34789af56f6bb29b143a4);
+        
+    
+            var div_icon_9bab2451ceaf52b17b5d8d9b922eb9e8 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 12pt; color: black;\"\u003e\u003cb\u003e3\u003c/b\u003e\u003c/div\u003e",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+                marker_74ba2fb4799879e68dd01ef09ee206cb.setIcon(div_icon_9bab2451ceaf52b17b5d8d9b922eb9e8);
+            
+    
+            var marker_d2ec2fea480707f128234fdde00b926d = L.marker(
+                [51.5014, -0.1419],
+                {
+}
+            ).addTo(map_f85a40a60cd34789af56f6bb29b143a4);
+        
+    
+            var icon_4434e3ae1daef9400434a34d31a1ee32 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_aa99a78cbe110d26c36517fe53e5dcf6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_243b9097474501c37c3c5dedba4b3114 = $(`<div id="html_243b9097474501c37c3c5dedba4b3114" style="width: 100.0%; height: 100.0%;"><b>Stop 4: Buckingham Palace</b><br><i>Clue:</i> Facing the palace, count the number of lampposts between the two main gates. Each lamppost is topped with a creature—what is it, and what does it symbolise?<br><b>what3words:</b> fence.gross.bats</div>`)[0];
+                popup_aa99a78cbe110d26c36517fe53e5dcf6.setContent(html_243b9097474501c37c3c5dedba4b3114);
+            
+        
+
+        marker_d2ec2fea480707f128234fdde00b926d.bindPopup(popup_aa99a78cbe110d26c36517fe53e5dcf6)
+        ;
+
+        
+    
+    
+                marker_d2ec2fea480707f128234fdde00b926d.setIcon(icon_4434e3ae1daef9400434a34d31a1ee32);
+            
+    
+            var marker_e67bc1810efafc4c12465723d8c084fa = L.marker(
+                [51.5014, -0.1419],
+                {
+}
+            ).addTo(map_f85a40a60cd34789af56f6bb29b143a4);
+        
+    
+            var div_icon_9d0472531150f428b3c0b4dc7f493c18 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 12pt; color: black;\"\u003e\u003cb\u003e4\u003c/b\u003e\u003c/div\u003e",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+                marker_e67bc1810efafc4c12465723d8c084fa.setIcon(div_icon_9d0472531150f428b3c0b4dc7f493c18);
+            
+    
+            var marker_e160376d48c118ea22d1bb9848bd2710 = L.marker(
+                [51.501, -0.1345],
+                {
+}
+            ).addTo(map_f85a40a60cd34789af56f6bb29b143a4);
+        
+    
+            var icon_3820404f122653a3bf5a9ce2242d54aa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_aa59bb192924c78d37e292a4127ee9ed = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f362d29443ac643c6718b1f4ceea88c9 = $(`<div id="html_f362d29443ac643c6718b1f4ceea88c9" style="width: 100.0%; height: 100.0%;"><b>Stop 5: St James’s Park – Blue Bridge</b><br><i>Clue:</i> From the centre of the bridge, you can see three royal landmarks in a straight line. Name all three, and which one is closest to the pelicans?<br><b>what3words:</b> palace.lake.views</div>`)[0];
+                popup_aa59bb192924c78d37e292a4127ee9ed.setContent(html_f362d29443ac643c6718b1f4ceea88c9);
+            
+        
+
+        marker_e160376d48c118ea22d1bb9848bd2710.bindPopup(popup_aa59bb192924c78d37e292a4127ee9ed)
+        ;
+
+        
+    
+    
+                marker_e160376d48c118ea22d1bb9848bd2710.setIcon(icon_3820404f122653a3bf5a9ce2242d54aa);
+            
+    
+            var marker_f57d65fc8e7e58137633df5f44394989 = L.marker(
+                [51.501, -0.1345],
+                {
+}
+            ).addTo(map_f85a40a60cd34789af56f6bb29b143a4);
+        
+    
+            var div_icon_e054cd1bf06a32bb6fb23bd26babf78f = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 12pt; color: black;\"\u003e\u003cb\u003e5\u003c/b\u003e\u003c/div\u003e",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+                marker_f57d65fc8e7e58137633df5f44394989.setIcon(div_icon_e054cd1bf06a32bb6fb23bd26babf78f);
+            
+    
+            var marker_807ec1a5dd96d5ad01d64f8fd5570fb6 = L.marker(
+                [51.5066, -0.1276],
+                {
+}
+            ).addTo(map_f85a40a60cd34789af56f6bb29b143a4);
+        
+    
+            var icon_af64b0e08e7c6892f96c30164e32b334 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_301e6d78d6bc1a6c7cf6983608898d29 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_faee50be01f98d88ae01a1dc20a4499a = $(`<div id="html_faee50be01f98d88ae01a1dc20a4499a" style="width: 100.0%; height: 100.0%;"><b>Stop 6: Admiralty Arch</b><br><i>Clue:</i> One arch is reserved for royalty. Which one is it, and what object is embedded in the wall on the left?<br><b>what3words:</b> arch.nose.secret</div>`)[0];
+                popup_301e6d78d6bc1a6c7cf6983608898d29.setContent(html_faee50be01f98d88ae01a1dc20a4499a);
+            
+        
+
+        marker_807ec1a5dd96d5ad01d64f8fd5570fb6.bindPopup(popup_301e6d78d6bc1a6c7cf6983608898d29)
+        ;
+
+        
+    
+    
+                marker_807ec1a5dd96d5ad01d64f8fd5570fb6.setIcon(icon_af64b0e08e7c6892f96c30164e32b334);
+            
+    
+            var marker_7216a3e90517986e6b4dbf3f6d07a752 = L.marker(
+                [51.5066, -0.1276],
+                {
+}
+            ).addTo(map_f85a40a60cd34789af56f6bb29b143a4);
+        
+    
+            var div_icon_ef7f6a9350c1867f54963ca0e5e7ff87 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 12pt; color: black;\"\u003e\u003cb\u003e6\u003c/b\u003e\u003c/div\u003e",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+                marker_7216a3e90517986e6b4dbf3f6d07a752.setIcon(div_icon_ef7f6a9350c1867f54963ca0e5e7ff87);
+            
+    
+            var marker_7cf97be3309f149cb7f6b89526d71018 = L.marker(
+                [51.5079, -0.1283],
+                {
+}
+            ).addTo(map_f85a40a60cd34789af56f6bb29b143a4);
+        
+    
+            var icon_65a706d8473cffdaf48aec80fe0ced56 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6980a995516c37a9fbd79dd6a6435f4b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bcdb74c4608d6d5e79b2fbedf29b299c = $(`<div id="html_bcdb74c4608d6d5e79b2fbedf29b299c" style="width: 100.0%; height: 100.0%;"><b>Stop 7: Trafalgar Square</b><br><i>Clue:</i> Find the smallest statue in Trafalgar Square. Who does it depict, and why was it placed there?<br><b>what3words:</b> feed.quiet.copper</div>`)[0];
+                popup_6980a995516c37a9fbd79dd6a6435f4b.setContent(html_bcdb74c4608d6d5e79b2fbedf29b299c);
+            
+        
+
+        marker_7cf97be3309f149cb7f6b89526d71018.bindPopup(popup_6980a995516c37a9fbd79dd6a6435f4b)
+        ;
+
+        
+    
+    
+                marker_7cf97be3309f149cb7f6b89526d71018.setIcon(icon_65a706d8473cffdaf48aec80fe0ced56);
+            
+    
+            var marker_d89c61ab00a1d84e65889c7b0ca013d0 = L.marker(
+                [51.5079, -0.1283],
+                {
+}
+            ).addTo(map_f85a40a60cd34789af56f6bb29b143a4);
+        
+    
+            var div_icon_cae0f012a9b1041758cdbc3d939acd7a = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 12pt; color: black;\"\u003e\u003cb\u003e7\u003c/b\u003e\u003c/div\u003e",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+                marker_d89c61ab00a1d84e65889c7b0ca013d0.setIcon(div_icon_cae0f012a9b1041758cdbc3d939acd7a);
+            
+    
+            var marker_1ca40086069bbe7ae964dda78f69436f = L.marker(
+                [51.5071, -0.1383],
+                {
+}
+            ).addTo(map_f85a40a60cd34789af56f6bb29b143a4);
+        
+    
+            var icon_e27b95201bae3456578655394ab9f43d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5dbfba84d4de09b5d374fbe67250c1a2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5fd86743dd4771d65d378cd3cb38604c = $(`<div id="html_5fd86743dd4771d65d378cd3cb38604c" style="width: 100.0%; height: 100.0%;"><b>Stop 8: Café Murano (St James’s)</b><br><i>Clue:</i> Look for the blue plaque. Who is commemorated here, and what was their contribution to London?<br><b>what3words:</b> olive.wisdom.pasta</div>`)[0];
+                popup_5dbfba84d4de09b5d374fbe67250c1a2.setContent(html_5fd86743dd4771d65d378cd3cb38604c);
+            
+        
+
+        marker_1ca40086069bbe7ae964dda78f69436f.bindPopup(popup_5dbfba84d4de09b5d374fbe67250c1a2)
+        ;
+
+        
+    
+    
+                marker_1ca40086069bbe7ae964dda78f69436f.setIcon(icon_e27b95201bae3456578655394ab9f43d);
+            
+    
+            var marker_965bb1a44ffc6f7608c9a403cd494d4f = L.marker(
+                [51.5071, -0.1383],
+                {
+}
+            ).addTo(map_f85a40a60cd34789af56f6bb29b143a4);
+        
+    
+            var div_icon_2601f43db92373a1cc8a29bf31ce6b34 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size: 12pt; color: black;\"\u003e\u003cb\u003e8\u003c/b\u003e\u003c/div\u003e",
+  "iconSize": [30, 30],
+  "iconAnchor": [15, 15],
+  "className": "empty",
+});
+        
+    
+                marker_965bb1a44ffc6f7608c9a403cd494d4f.setIcon(div_icon_2601f43db92373a1cc8a29bf31ce6b34);
+            
+</script>
+</html>
